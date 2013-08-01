@@ -4,7 +4,7 @@
   <title><![CDATA[Albrechts Blog]]></title>
   <link href="http://aschei.github.io/atom.xml" rel="self"/>
   <link href="http://aschei.github.io/"/>
-  <updated>2013-08-01T01:47:00+02:00</updated>
+  <updated>2013-08-01T02:15:59+02:00</updated>
   <id>http://aschei.github.io/</id>
   <author>
     <name><![CDATA[Albrecht Scheidig]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Blog on GitHub using Octopress]]></title>
+    <link href="http://aschei.github.io/blog/2013/08/01/blog-on-github-using-octopress/"/>
+    <updated>2013-08-01T01:54:00+02:00</updated>
+    <id>http://aschei.github.io/blog/2013/08/01/blog-on-github-using-octopress</id>
+    <content type="html"><![CDATA[<p>Today, I have stumbled upon a blog that uses <a href="http://octopress.org">Octopress</a>. It looked very clean, and I read something about Octopress and it&rsquo;s concepts.</p>
+
+<p>It seemed similar to my current blog setup, meaning that it produces static pages out of the sources, that can then be transferred to the web server and be served very fast and easily.</p>
+
+<p>Octopress also offers easy integration with <a href="http://pages.github.com/">Github Pages</a>. Github Pages is a hosting service of Github that is coupled to a GIT repository on GitHub. Just push changes to the GIT repository, and within seconds the changes are reflected on the respective site.</p>
+
+<p>My repository is located <a href="https://github.com/aschei/aschei.github.io">here</a>, and the site can be viewed <a href="http://aschei.github.io">here</a>.</p>
+
+<p>A cool concept octopress makes use of is to keep sources and the generated results in the same repository by using branches. Sources are committed to branch <a href="https://github.com/aschei/aschei.github.io/tree/source">&ldquo;source&rdquo;</a>, while the result is committed to <a href="https://github.com/aschei/aschei.github.io/tree/master">&ldquo;master</a>. The two branches contain conceptually completely different artifacts, and they will never get merged.</p>
+
+<p>The whole setup is really easy to make and it is a joy to work with it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How this site was built]]></title>
