@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical | Albrechts Blog]]></title>
   <link href="http://aschei.github.io/blog/categories/technical/atom.xml" rel="self"/>
   <link href="http://aschei.github.io/"/>
-  <updated>2013-08-01T02:15:59+02:00</updated>
+  <updated>2013-08-01T02:25:12+02:00</updated>
   <id>http://aschei.github.io/</id>
   <author>
     <name><![CDATA[Albrecht Scheidig]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How this site was built]]></title>
+    <title type="html"><![CDATA[How my other site was built]]></title>
     <link href="http://aschei.github.io/blog/2013/05/09/howsitewasbuilt/"/>
     <updated>2013-05-09T17:52:00+02:00</updated>
     <id>http://aschei.github.io/blog/2013/05/09/howsitewasbuilt</id>
-    <content type="html"><![CDATA[<p>When planning this site I have had some ideas what I want to achieve. I wanted a typical
+    <content type="html"><![CDATA[<p>When planning my other blogging <a href="http://aschei.x64.me">site</a> I have had some ideas what I want to achieve. I wanted a typical
 blog site but with extra flexibility for trying out other stuff and learning about
 different tools I am interested in.</p>
 
