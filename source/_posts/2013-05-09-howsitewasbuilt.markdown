@@ -3,9 +3,9 @@ categories: Technical
 layout: post
 comments: true
 date: 2013/05/09 17:52:00
-title: How this site was built 
+title: How my other site was built 
 ---
-When planning this site I have had some ideas what I want to achieve. I wanted a typical 
+When planning my other blogging [site](http://aschei.x64.me) I have had some ideas what I want to achieve. I wanted a typical 
 blog site but with extra flexibility for trying out other stuff and learning about
 different tools I am interested in.
  
