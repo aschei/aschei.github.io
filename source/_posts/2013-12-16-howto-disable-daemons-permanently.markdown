@@ -5,7 +5,7 @@ date: 2013-12-16 22:35
 comments: true
 categories: 
 ---
-Ubuntu uses the [upstart](http://upstart.ubuntu.com/) system to start several services. Every service controled via upstart has a .conf file in the directory /etc/init, so you can list the available services using
+Ubuntu uses the [upstart](http://upstart.ubuntu.com/) system to start several services. Every service controlled via upstart has a .conf file in the directory /etc/init, so you can list the available services using
 <code>
 ls -l /etc/init/\*.conf
 </code>
@@ -15,9 +15,10 @@ To disable a service, upstart supports a ["manual"](http://upstart.ubuntu.com/co
 <code>
 sudo sh -c "echo 'manual' > /etc/init/SERVICE.override"
 </code>
+
 To reenable the service just delete the .override file.
 
-Not every service is controled via upstart, on my system e.g. nessus is controled via init.d. Services controled via init.d are configured using an executable script in /etc/init.d and links to this script, that are located in /etc/rc?.d, according to the certain runlevels. To disable such a service, the easiest option is to remove the executable flag from the script, such as
+Not every service is controlled via upstart, on my system e.g. nessus is controlled via init.d. Services controlled via init.d are configured using an executable script in /etc/init.d and links to this script, that are located in /etc/rc?.d, according to the certain runlevels. To disable such a service, the easiest option is to remove the executable flag from the script, such as
 
 <code>
 sudo chmod -x /etc/init.d/nessusd
