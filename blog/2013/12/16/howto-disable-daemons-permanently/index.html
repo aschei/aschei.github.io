@@ -9,7 +9,7 @@
   <meta name="author" content="Albrecht Scheidig">
 
   
-  <meta name="description" content="Ubuntu uses the upstart system to start several services. Every service controled via upstart has a .conf file in the directory /etc/init, so you can &hellip;">
+  <meta name="description" content="Ubuntu uses the upstart system to start several services. Every service controlled via upstart has a .conf file in the directory /etc/init, so you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,7 +91,7 @@
   </header>
 
 
-<div class="entry-content"><p>Ubuntu uses the <a href="http://upstart.ubuntu.com/">upstart</a> system to start several services. Every service controled via upstart has a .conf file in the directory /etc/init, so you can list the available services using
+<div class="entry-content"><p>Ubuntu uses the <a href="http://upstart.ubuntu.com/">upstart</a> system to start several services. Every service controlled via upstart has a .conf file in the directory /etc/init, so you can list the available services using
 <code>
 ls -l /etc/init/*.conf
 </code></p>
@@ -99,10 +99,11 @@ ls -l /etc/init/*.conf
 <p>To disable a service, upstart supports a <a href="http://upstart.ubuntu.com/cookbook/#manual">&ldquo;manual&rdquo;</a> configuration element, that can be placed either in the &lt;service>.conf file or in an overriding file &lt;service>.override using
 <code>
 sudo sh -c &ldquo;echo &lsquo;manual&rsquo; > /etc/init/SERVICE.override&rdquo;
-</code>
-To reenable the service just delete the .override file.</p>
+</code></p>
 
-<p>Not every service is controled via upstart, on my system e.g. nessus is controled via init.d. Services controled via init.d are configured using an executable script in /etc/init.d and links to this script, that are located in /etc/rc?.d, according to the certain runlevels. To disable such a service, the easiest option is to remove the executable flag from the script, such as</p>
+<p>To reenable the service just delete the .override file.</p>
+
+<p>Not every service is controlled via upstart, on my system e.g. nessus is controlled via init.d. Services controlled via init.d are configured using an executable script in /etc/init.d and links to this script, that are located in /etc/rc?.d, according to the certain runlevels. To disable such a service, the easiest option is to remove the executable flag from the script, such as</p>
 
 <p><code>
 sudo chmod -x /etc/init.d/nessusd
