@@ -9,7 +9,7 @@
   <meta name="author" content="Albrecht Scheidig">
 
   
-  <meta name="description" content="Today, I have stumbled upon a blog that uses Octopress. It looked very clean, and I read something about Octopress and it&rsquo;s concepts. It seemed &hellip;">
+  <meta name="description" content="Ubuntu uses the upstart system to start several services. Every service controled via upstart has a .conf file in the directory /etc/init, so you can &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,63 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/16/howto-disable-daemons-permanently/">How to Disable Daemons Under Ubuntu 12.04 and Above</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-16T22:35:00+01:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ubuntu uses the <a href="http://upstart.ubuntu.com/">upstart</a> system to start several services. Every service controled via upstart has a .conf file in the directory /etc/init, so you can list the available services using
+<code>
+ls -l /etc/init/*.conf
+</code></p>
+
+<p>To disable a service, upstart supports a <a href="http://upstart.ubuntu.com/cookbook/#manual">&ldquo;manual&rdquo;</a> configuration element, that can be placed either in the &lt;service>.conf file or in an overriding file &lt;service>.override using
+<code>
+sudo sh -c &ldquo;echo &lsquo;manual&rsquo; > /etc/init/SERVICE.override&rdquo;
+</code>
+To reenable the service just delete the .override file.</p>
+
+<p>Not every service is controled via upstart, on my system e.g. nessus is controled via init.d. Services controled via init.d are configured using an executable script in /etc/init.d and links to this script, that are located in /etc/rc?.d, according to the certain runlevels. To disable such a service, the easiest option is to remove the executable flag from the script, such as</p>
+
+<p><code>
+sudo chmod -x /etc/init.d/nessusd
+</code></p>
+
+<p>To revert your decision, just add the executable bit again:</p>
+
+<p><code>
+sudo chmod +x /etc/init.d/nessusd
+</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -373,6 +430,10 @@ different process to get the best ressults out. And that process needs to be ref
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/12/16/howto-disable-daemons-permanently/">How to Disable Daemons Under Ubuntu 12.04 and Above</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/08/01/blog-on-github-using-octopress/">Blog on GitHub Using Octopress</a>
