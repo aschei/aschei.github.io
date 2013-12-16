@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://aschei.github.io/sitemap.xml 
