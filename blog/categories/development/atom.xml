@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Development, | Albrechts Blog]]></title>
+  <link href="http://aschei.github.io/blog/categories/development/atom.xml" rel="self"/>
+  <link href="http://aschei.github.io/"/>
+  <updated>2013-11-25T15:31:35+01:00</updated>
+  <id>http://aschei.github.io/</id>
+  <author>
+    <name><![CDATA[Albrecht Scheidig]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Avoid big bug backlogs]]></title>
+    <link href="http://aschei.github.io/blog/2013/04/18/bug-backlog/"/>
+    <updated>2013-04-18T21:24:00+02:00</updated>
+    <id>http://aschei.github.io/blog/2013/04/18/bug-backlog</id>
+    <content type="html"><![CDATA[<p>I strongly recommend to avoid long lists of bugs. Today, we have cool tools like <a href="http://bugzilla.org">Bugzilla</a>
+or <a href="http://www.atlassian.com/software/jira/">Jira</a> that make tracking bugs real fun even if there are big numbers of it.</p>
+
+<p>I can imagine a situation where a software product has no known bugs and is complete in a functional sense.
+However, I have never been in this situation since I have started working on software. The typical situation I experience is:</p>
+
+<ul>
+<li><p>you have got plenty of things that should be improved, extended, added &ndash; more than you can implement.</p></li>
+<li><p>you have got plenty of bug tickets, more than you can handle.</p></li>
+</ul>
+
+
+<p>If you are in a situation where you sell software you are developing you also have to
+weigh effort, priorities, expected damage caused by bugs and expected gain from improvements. You cannot
+implement what you want. So how about filling lists of features, lists of bugs, prioritize them, estimate
+them roughly, and finally decide what is the next important item that should be implemented? It sounds
+promising. You only have to manage one list that is sorted by a function depending on effort, estimate,
+priority etc. and sort new items into this list.</p>
+
+<p>Feed the first four items of this ultimate list to a <a href="http://en.wikipedia.org/wiki/Kanban_board">Kanban-Board</a>
+every day and let the developers pick items in order.</p>
+
+<p>Bullshit.</p>
+
+<p>In my experience you cannot prioritize bugs and features into one list. You simply cannot compare
+them. Maybe a prioritized backlog is good for features, but it is not for bugs. Bugs are not a thing
+of planning or betting on. Bugs are the bill you get for your past work. You simply cannot avoid to pay that bill.</p>
+
+<p>I recommend the following to process bugs:</p>
+
+<ul>
+<li><p>If a bug comes in: Decide if it is really a bug or possibly an enhancement (enhancement &ndash;> feature backlog).</p></li>
+<li><p>Decide if you want to fix the bug. The decision should only take into account the level of quality
+you want to deliver, not what other things you have on your agenda.</p></li>
+<li><p>If the bug is not important enough &ndash; and this is the important point &ndash; <em>close it as &ldquo;won&rsquo;t fix&rdquo;</em>.</p></li>
+<li><p>Otherwise choose between three severities: Fix it &ldquo;now&rdquo;, &ldquo;today or tomorrow&rdquo;, &ldquo;within the next two weeks&rdquo;.</p></li>
+<li><p>Assign the bug to a person that should fix it actually.</p></li>
+<li><p>Measure time spent on bug fixing. If it goes beyond 15 percent take a sharp look what is happening with
+your software.</p></li>
+</ul>
+
+
+<p>So why not simply give non important bugs a low priority and keep them in the list? Why not say: &ldquo;Hey,
+if one has nothing to do: just pick a bug from the "non-important&rdquo; pool.&ldquo; For me this would be a statement
+like "We provide a quality level that depends on the time that is left over&rdquo;.
+It is also unclear if this sort of bugs should be part of a &ldquo;open bugs&rdquo; statistic. More: In the
+unlikely case that someone would have time left over: What bug would she select? How would she choose from
+the list of 100k bugs?
+So just close these bugs and enjoy the pleasures of the real, lean bug list.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Development principles I am convinced of]]></title>
+    <link href="http://aschei.github.io/blog/2013/04/13/principles/"/>
+    <updated>2013-04-13T02:21:00+02:00</updated>
+    <id>http://aschei.github.io/blog/2013/04/13/principles</id>
+    <content type="html"><![CDATA[<p>In my current company we had tried out several agile processes including Kanban and Scrum,
+but in some areas we have decided to go back to &ldquo;old school&rdquo; practises. We have four week iterations,
+continous integration, automated build systems etc. But on the other hand we &ldquo;push&rdquo; tasks to
+developers, have code ownership, do very little pair programming and skip to write unit tests in non
+trivial areas like UI. We are successful with this process, but it depends how you measure success.</p>
+
+<p>There are some things I do not like:</p>
+
+<ul>
+<li><p>Big back logs, including lot&rsquo;s of prio 4 or 5 bugs you keep to fix them later if you have the time.</p></li>
+<li><p>Big stocks of unfinished work, like features in branches that cannot be merged because of x, y, z.</p></li>
+<li><p>Requirements on estimations that go beyond a gut feeling. Especially I hate a) to &ldquo;break down&rdquo;
+a piece of work, estimate the parts and sum it up, and b) handle estimations like promises.</p></li>
+<li><p>Making detailed plans that go beyond the next week. I have no problems with making plans
+that define a complete year, but the granularity should be appropriate.</p></li>
+</ul>
+
+
+<p>And, there are some practises I am convinced of:</p>
+
+<ul>
+<li><p>Stick to quality. If a bug appears: fix it or kill it if it is not worth it. If you see stuff to clean up: clean it up.</p></li>
+<li><p>Spend time on infrastructure to automate stuff, spend time on improving performance of your
+build process. Use command line scripts to automate stupid, repetitive work.</p></li>
+<li><p>Write unit tests that really test a unit of work, i.e. a class. Write unit tests. Do not mistake
+integration tests for unit tests.</p></li>
+<li><p>Don&rsquo;t trust process evangelists, every group of people working together in a project needs a
+different process to get the best ressults out. And that process needs to be refactored like your code.</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
