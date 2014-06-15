@@ -4,7 +4,7 @@
   <title><![CDATA[Albrechts Blog]]></title>
   <link href="http://aschei.github.io/atom.xml" rel="self"/>
   <link href="http://aschei.github.io/"/>
-  <updated>2013-12-17T01:05:40+01:00</updated>
+  <updated>2014-06-16T01:27:02+02:00</updated>
   <id>http://aschei.github.io/</id>
   <author>
     <name><![CDATA[Albrecht Scheidig]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A replacement for Truecrypt]]></title>
+    <link href="http://aschei.github.io/blog/2014/06/16/a-replacement-for-truecrypt/"/>
+    <updated>2014-06-16T01:08:00+02:00</updated>
+    <id>http://aschei.github.io/blog/2014/06/16/a-replacement-for-truecrypt</id>
+    <content type="html"><![CDATA[<p>When I realized that Truecrypt will no longer be developed I looked around for a proper replacement.</p>
+
+<p>In the end I wrote a set of scripts to ease the mounting of AES encrypted file containers under Linux. Let&rsquo;s say this is a command line truecrypt replacement.</p>
+
+<p>Check it out <a href="https://github.com/aschei/encdrive">here</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to disable daemons under Ubuntu 12.04 and above]]></title>
