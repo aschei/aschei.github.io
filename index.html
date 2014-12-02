@@ -9,7 +9,8 @@
   <meta name="author" content="Albrecht Scheidig">
 
   
-  <meta name="description" content="Today, I have stumbled upon a blog that uses Octopress. It looked very clean, and I read something about Octopress and it&rsquo;s concepts. It seemed &hellip;">
+  <meta name="description" content="At work, we use windows computers, and I am currently in the transition from one computer to the next one.
+This process typically takes at least a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +66,152 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/12/02/bye-bye-cygwin/">Bye Bye, Cygwin</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-02T22:51:28+01:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At work, we use windows computers, and I am currently in the transition from one computer to the next one.
+This process typically takes at least a month, until I am confident enough that I have not missed something.</p>
+
+<p>Today, I realized that I will not install cygwin on the new computer, because&hellip; <em>Well, I have not used it for ages</em>.
+During the last years, I&rsquo;ve always run at least one Virtual Machine with Ubuntu on my Windows host, that gives me a
+fully fledged Linux environment with access to the file system of the host.</p>
+
+<p>Before that time I used to reinstall cygwin and transferred settings and scripts until everything worked again.</p>
+
+<p>But today I have no real use case to do so. The pain in a mixed environment (file name encoding, line endings, etc.)
+is the same for both techniques. I also have no use for DOS scripts using Unix binaries compiled for DOS.</p>
+
+<p>So all in all I would like to say Good Bye to cygwin and thanks for all the fish.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/06/16/a-replacement-for-truecrypt/">A Replacement for Truecrypt</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-16T01:08:00+02:00" pubdate data-updated="true">Jun 16<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I realized that Truecrypt will no longer be developed I looked around for a proper replacement.</p>
+
+<p>In the end I wrote a set of scripts to ease the mounting of AES encrypted file containers under Linux. Let&rsquo;s say this is a command line truecrypt replacement.</p>
+
+<p>Check it out <a href="https://github.com/aschei/encdrive">here</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/16/howto-disable-daemons-permanently/">How to Disable Daemons Under Ubuntu 12.04 and Above</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-16T22:35:00+01:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ubuntu uses the <a href="http://upstart.ubuntu.com/">upstart</a> system to start several services. Every service controlled via upstart has a .conf file in the directory /etc/init, so you can list the available services using
+<code>
+ls -l /etc/init/*.conf
+</code></p>
+
+<p>To disable a service, upstart supports a <a href="http://upstart.ubuntu.com/cookbook/#manual">&ldquo;manual&rdquo;</a> configuration element, that can be placed either in the &lt;service>.conf file or in an overriding file &lt;service>.override using
+<code>
+sudo sh -c &ldquo;echo &lsquo;manual&rsquo; > /etc/init/SERVICE.override&rdquo;
+</code></p>
+
+<p>To reenable the service just delete the .override file.</p>
+
+<p>Not every service is controlled via upstart, on my system e.g. nessus is controlled via init.d. Services controlled via init.d are configured using an executable script in /etc/init.d and links to this script, that are located in /etc/rc?.d, according to the certain runlevels. To disable such a service, the easiest option is to remove the executable flag from the script, such as</p>
+
+<p><code>
+sudo chmod -x /etc/init.d/nessusd
+</code></p>
+
+<p>To revert your decision, just add the executable bit again:</p>
+
+<p><code>
+sudo chmod +x /etc/init.d/nessusd
+</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -375,19 +522,23 @@ different process to get the best ressults out. And that process needs to be ref
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/12/02/bye-bye-cygwin/">Bye Bye, Cygwin</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/16/a-replacement-for-truecrypt/">A Replacement for Truecrypt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/16/howto-disable-daemons-permanently/">How to Disable Daemons Under Ubuntu 12.04 and Above</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/08/01/blog-on-github-using-octopress/">Blog on GitHub Using Octopress</a>
       </li>
     
       <li class="post">
         <a href="/blog/2013/05/09/howsitewasbuilt/">How My Other Site Was Built</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/18/bug-backlog/">Avoid Big Bug Backlogs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/13/principles/">Development Principles I Am Convinced Of</a>
       </li>
     
   </ul>
@@ -403,7 +554,7 @@ different process to get the best ressults out. And that process needs to be ref
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Albrecht Scheidig -
+  Copyright &copy; 2014 - Albrecht Scheidig -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
