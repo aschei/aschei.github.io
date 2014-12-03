@@ -15,6 +15,6 @@ fully fledged Linux environment with access to the file system of the host.
 Before that time I used to reinstall cygwin and transferred settings and scripts until everything worked again.
 
 But today I have no real use case to do so. The pain in a mixed environment (file name encoding, line endings, etc.)
-is the same for both techniques. I also have no use for DOS scripts using Unix binaries compiled for DOS.
+is the same for both techniques. I also have no use for DOS scripts using Unix tools compiled for DOS.
 
 So all in all I would like to say Good Bye to cygwin and thanks for all the fish.
