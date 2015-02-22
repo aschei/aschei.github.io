@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Processes - Albrechts Blog</title>
+  <title>Tool dilemma - Albrechts Blog</title>
   <meta name="author" content="Albrecht Scheidig">
 
   
-  <meta name="description" content="Category: Processes">
+  <meta name="description" content="If you write enterprise-size software in Java, you ran further or later into
+a dilemma regarding tools. On one hand you know that using IDEs like &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://aschei.github.ioblog/categories/processes">
+  <link rel="canonical" href="http://aschei.github.io/blog/2015/02/22/tool-dilemma">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Albrechts Blog" type="application/atom+xml">
@@ -65,50 +66,123 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Processes</h1>
+    
+      <h1 class="entry-title">Tool Dilemma</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-22T21:49:29+01:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2015</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>If you write enterprise-size software in Java, you ran further or later into
+a dilemma regarding tools.</p>
 
-  
-  <h2>2013</h2>
+<p>On one hand you know that using IDEs like Eclipse drives efficiency and adds
+support for streamlined workflows. IDEs provide handy features like call
+hierarchy and integrated debugging.</p>
 
-<article>
-  
-<h1><a href="/blog/2013/04/18/bug-backlog/">Avoid big bug backlogs</a></h1>
-<time datetime="2013-04-18T21:24:00+02:00" pubdate><span class='month'>Apr</span> <span class='day'>18</span> <span class='year'>2013</span></time>
+<p>On the other hand IDEs tend to introduce questionable artefacts into the
+overall build infrastructure, and sometimes lead decisions for questions
+regarding architecture.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/development/'>Development,</a>, <a class='category' href='/blog/categories/processes/'>Processes</a></span>
-</footer>
+<p>If you e.g. use maven as your dependency and build infrastructure then those
+IDEs have to completely understand your maven declarations to know about the
+classpath, output folders, compiler level etc. You tend to avoid maven features
+that your favorite IDE does not understand.</p>
 
+<p>If you always follow standard solutions and best practises, there might be no
+big issue between IDE and maven build. But sooner or later there will appear
+challenges for the IDE such as cross compiling, multi-projects, generated code.</p>
 
-</article>
+<p>In such situations it is recommended to take a step back and analyze the
+overall requirements for architecture and build infrastructure.
+Why do we have this generated code, where is it used, what does the generation
+depend on, when should it executed?
+As a result, you should have created a reasonable model of all build steps and
+an acyclic module dependency model.
+Often the root of all evil lies in unmanaged architecture and build
+infrastructure. Fix this and go ahead.</p>
 
+<p>Step number two should reflect the findings from step one into the actual
+dependency declarations and build infrastructure. A valid result of this
+step is a working command line build.</p>
 
-
-<article>
-  
-<h1><a href="/blog/2013/04/13/principles/">Development principles I am convinced of</a></h1>
-<time datetime="2013-04-13T02:21:00+02:00" pubdate><span class='month'>Apr</span> <span class='day'>13</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/development/'>Development,</a>, <a class='category' href='/blog/categories/processes/'>Processes</a></span>
-</footer>
-
-
-</article>
-
+<p>And then it is the last step that the IDE is tweaked to support the desired
+architecture. Sometimes, during this step, build infrastructure needs to be
+extended or even changed a little bit, but never should the changes go so far
+as to change the desired architecture. If the IDE is not able to cover the
+target architecture then you should propable rethink if this IDE is a good
+choice or if your requirements are too ambitious.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Albrecht Scheidig</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-22T21:49:29+01:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2015</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://aschei.github.io/blog/2015/02/22/tool-dilemma/" data-via="" data-counturl="http://aschei.github.io/blog/2015/02/22/tool-dilemma/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/12/02/bye-bye-cygwin/" title="Previous Post: Bye bye, cygwin">&laquo; Bye bye, cygwin</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -163,7 +237,10 @@
       var disqus_shortname = 'aschei';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://aschei.github.io/blog/2015/02/22/tool-dilemma/';
+        var disqus_url = 'http://aschei.github.io/blog/2015/02/22/tool-dilemma/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
