@@ -5,7 +5,7 @@ date: 2015-02-22 21:49:29 +0100
 comments: true
 categories: 
 ---
-If you write enterprise-size software in Java, you ran further or later into
+If you write enterprise-size software in Java, you ran sooner or later into
 a dilemma regarding tools.
 
 On one hand you know that using IDEs like Eclipse drives efficiency and adds
