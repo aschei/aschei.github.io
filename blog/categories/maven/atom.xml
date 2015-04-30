@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: maven | Albrechts Blog]]></title>
+  <link href="http://aschei.github.io/blog/categories/maven/atom.xml" rel="self"/>
+  <link href="http://aschei.github.io/"/>
+  <updated>2015-05-01T01:17:04+02:00</updated>
+  <id>http://aschei.github.io/</id>
+  <author>
+    <name><![CDATA[Albrecht Scheidig]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Determining affected tests using coverage info]]></title>
+    <link href="http://aschei.github.io/blog/2015/05/01/determining-affected-tests-using-coverage-info/"/>
+    <updated>2015-05-01T00:36:32+02:00</updated>
+    <id>http://aschei.github.io/blog/2015/05/01/determining-affected-tests-using-coverage-info</id>
+    <content type="html"><![CDATA[<p>If have got an idea inspired by <a href="http://tenderlovemaking.com/2015/02/13/predicting-test-failues.html">this post</a>.</p>
+
+<p>Every time when me or a build server runs a complete build on a commit with all tests, it could store
+detailed coverage information and associate it with this commit.</p>
+
+<p>Later on, when for instance I am fixing a bug, it should be possible to git diff the working directory to the latest
+parent commit that has associated coverage info. Looking up the changes and the coverage info, one could tell what
+tests are likely to be affected by the changes in between.</p>
+
+<p>If I then run only those tests, I am pretty confident that other tests will not break by my changes. I am not 100% sure
+but I am confident enough to commit the stuff and let the build server run a complete build which leads to new
+coverage info associated with this new commit.</p>
+
+<p>Some requirements I have in mind:</p>
+
+<ul>
+<li>Should work as a maven goal &ldquo;mvn affected:test&rdquo;</li>
+<li>Should work with git to provide diff and coverage info association.</li>
+<li>Should work with remotely stored coverage info. (Is it possible to store custom information associated with a commit into git repository?)</li>
+<li>Should work with <a href="http://mojo.codehaus.org/cobertura-maven-plugin/dump-datafile-mojo.html">cobertura</a></li>
+</ul>
+
+
+<p>I would really like to know, if I am the only one that thinks such a maven plugin would be useful,
+what obstacles you see, if there are better alternatives to cobertura and git or if a broader approach would make more sense.
+Let me know.</p>
+]]></content>
+  </entry>
+  
+</feed>

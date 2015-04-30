@@ -9,8 +9,7 @@
   <meta name="author" content="Albrecht Scheidig">
 
   
-  <meta name="description" content="If you write enterprise-size software in Java, you ran sooner or later into
-a dilemma regarding tools. On one hand you know that using IDEs like &hellip;">
+  <meta name="description" content="If have got an idea inspired by this post. Every time when me or a build server runs a complete build on a commit with all tests, it could store &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +66,67 @@ a dilemma regarding tools. On one hand you know that using IDEs like &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/05/01/determining-affected-tests-using-coverage-info/">Determining Affected Tests Using Coverage Info</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-05-01T00:36:32+02:00" pubdate data-updated="true">May 1<span>st</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If have got an idea inspired by <a href="http://tenderlovemaking.com/2015/02/13/predicting-test-failues.html">this post</a>.</p>
+
+<p>Every time when me or a build server runs a complete build on a commit with all tests, it could store
+detailed coverage information and associate it with this commit.</p>
+
+<p>Later on, when for instance I am fixing a bug, it should be possible to git diff the working directory to the latest
+parent commit that has associated coverage info. Looking up the changes and the coverage info, one could tell what
+tests are likely to be affected by the changes in between.</p>
+
+<p>If I then run only those tests, I am pretty confident that other tests will not break by my changes. I am not 100% sure
+but I am confident enough to commit the stuff and let the build server run a complete build which leads to new
+coverage info associated with this new commit.</p>
+
+<p>Some requirements I have in mind:</p>
+
+<ul>
+<li>Should work as a maven goal &ldquo;mvn affected:test&rdquo;</li>
+<li>Should work with git to provide diff and coverage info association.</li>
+<li>Should work with remotely stored coverage info. (Is it possible to store custom information associated with a commit into git repository?)</li>
+<li>Should work with <a href="http://mojo.codehaus.org/cobertura-maven-plugin/dump-datafile-mojo.html">cobertura</a></li>
+</ul>
+
+
+<p>I would really like to know, if I am the only one that thinks such a maven plugin would be useful,
+what obstacles you see, if there are better alternatives to cobertura and git or if a broader approach would make more sense.
+Let me know.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -597,6 +657,10 @@ different process to get the best ressults out. And that process needs to be ref
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/05/01/determining-affected-tests-using-coverage-info/">Determining Affected Tests Using Coverage Info</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/22/tool-dilemma/">Tool Dilemma</a>
       </li>
     
@@ -610,10 +674,6 @@ different process to get the best ressults out. And that process needs to be ref
     
       <li class="post">
         <a href="/blog/2013/12/16/howto-disable-daemons-permanently/">How to Disable Daemons Under Ubuntu 12.04 and Above</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/08/01/blog-on-github-using-octopress/">Blog on GitHub Using Octopress</a>
       </li>
     
   </ul>
