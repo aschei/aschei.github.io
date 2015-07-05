@@ -4,7 +4,7 @@
   <title><![CDATA[Albrechts Blog]]></title>
   <link href="http://aschei.github.io/atom.xml" rel="self"/>
   <link href="http://aschei.github.io/"/>
-  <updated>2015-05-01T01:17:04+02:00</updated>
+  <updated>2015-07-05T13:38:22+02:00</updated>
   <id>http://aschei.github.io/</id>
   <author>
     <name><![CDATA[Albrecht Scheidig]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Radieschensalat]]></title>
+    <link href="http://aschei.github.io/blog/2015/07/05/radieschensalat/"/>
+    <updated>2015-07-05T13:00:20+02:00</updated>
+    <id>http://aschei.github.io/blog/2015/07/05/radieschensalat</id>
+    <content type="html"><![CDATA[<h2>Ein leckerer Sommersalat als Beilage oder zwischendurch</h2>
+
+<p>Wohin mit den Radieschen? Dieser Salat ist eine leckere Option, wenn man ein paar Radieschen übrig hat.
+Und die Zubereitung ist denkbar einfach.</p>
+
+<h2>Zutaten für zwei Personen</h2>
+
+<ol>
+<li>Ein Bund <strong>Radieschen</strong></li>
+<li>Eine gute Handvoll <strong>Petersilie</strong></li>
+<li>Geschmacksneutrales Öl, z.B. Rapsöl</li>
+<li>Essig, z.B. Balsamico</li>
+<li>Salz</li>
+</ol>
+
+
+<h2>Zubereitung</h2>
+
+<ol>
+<li>Radieschen waschen und kleinschneiden.</li>
+<li>Petersilie waschen und fein wiegen.</li>
+<li>Radieschen und Petersilie in einer Schüssel vermengen.</li>
+<li>2 EL Öl dazu.</li>
+<li>1-2 TL Essig dazu.</li>
+<li>Gut salzen und vermengen.</li>
+</ol>
+
+
+<p>Neben dem beliebten Balsamico können auch gerne andere Essige verwendet werden, z.B. Weinessig.</p>
+
+<p>Petersilie, Öl und Salz nehmen den Radieschen die Schärfe, das Essig setzt einen geschmachlichen
+Kontrapunkt, darf aber nicht dominieren &ndash; daher vorsichtig dosieren.</p>
+
+<p>Der Salat darf gerne eine Stunde durchziehen, muss aber nicht.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Determining affected tests using coverage info]]></title>
