@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Technical - Albrechts Blog</title>
+  <title>Services in Ubuntu 16.04 - Albrechts Blog</title>
   <meta name="author" content="Albrecht Scheidig">
 
   
-  <meta name="description" content="Category: Technical">
+  <meta name="description" content="Ubuntu since 14.04 switches to systemd to manage services. Time to
+learn something new. Key to systemd is the command systemctl Disable a service (so &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://aschei.github.ioblog/categories/technical">
+  <link rel="canonical" href="http://aschei.github.io/blog/2017/04/20/services-in-ubuntu-16-dot-04">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Albrechts Blog" type="application/atom+xml">
@@ -65,53 +66,107 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Technical</h1>
+    
+      <h1 class="entry-title">Services in Ubuntu 16.04</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-04-20T23:37:09+02:00" pubdate data-updated="true">Apr 20<span>th</span>, 2017</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Ubuntu since 14.04 switches to <a href="https://freedesktop.org/wiki/Software/systemd/">systemd</a> to manage services. Time to
+learn something new.</p>
 
-  
-  <h2>2017</h2>
+<p>Key to systemd is the command <code>systemctl</code></p>
 
-<article>
-  
-<h1><a href="/blog/2017/04/20/services-in-ubuntu-16-dot-04/">Services in Ubuntu 16.04</a></h1>
-<time datetime="2017-04-20T23:37:09+02:00" pubdate><span class='month'>Apr</span> <span class='day'>20</span> <span class='year'>2017</span></time>
+<p>Disable a service (so that it does not start when system reboots):<br>
+<code>sudo systemctl disable mongodb</code></p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/technical/'>Technical</a></span>
-</footer>
+<p>Enable a service (for automatic startup when system reboots):<br>
+<code>sudo systemctl enable mongodb</code></p>
 
+<p>Start / Stop a service:<br>
+<code>sudo systemctl start mongodb</code><br>
+<code>sudo systemctl stop mongodb</code><br></p>
 
-</article>
-
-
-
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/blog/2013/05/09/howsitewasbuilt/">How my other site was built</a></h1>
-<time datetime="2013-05-09T17:52:00+02:00" pubdate><span class='month'>May</span> <span class='day'>09</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/technical/'>Technical</a></span>
-</footer>
-
-
-</article>
-
+<p>Further helpful tweaks for systemd on <a href="https://wiki.ubuntuusers.de/systemd/Service_Units/">this page</a>.
+See also <a href="/blog/2013/12/16/howto-disable-daemons-permanently/">this</a> former post about upstart and systemv runlevels.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Albrecht Scheidig</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-04-20T23:37:09+02:00" pubdate data-updated="true">Apr 20<span>th</span>, 2017</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technical/'>Technical</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://aschei.github.io/blog/2017/04/20/services-in-ubuntu-16-dot-04/" data-via="" data-counturl="http://aschei.github.io/blog/2017/04/20/services-in-ubuntu-16-dot-04/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/07/05/radieschensalat/" title="Previous Post: Radieschensalat">&laquo; Radieschensalat</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -166,7 +221,10 @@
       var disqus_shortname = 'aschei';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://aschei.github.io/blog/2017/04/20/services-in-ubuntu-16-dot-04/';
+        var disqus_url = 'http://aschei.github.io/blog/2017/04/20/services-in-ubuntu-16-dot-04/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

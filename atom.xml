@@ -4,7 +4,7 @@
   <title><![CDATA[Albrechts Blog]]></title>
   <link href="http://aschei.github.io/atom.xml" rel="self"/>
   <link href="http://aschei.github.io/"/>
-  <updated>2015-07-05T13:38:22+02:00</updated>
+  <updated>2017-04-21T00:11:35+02:00</updated>
   <id>http://aschei.github.io/</id>
   <author>
     <name><![CDATA[Albrecht Scheidig]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Services in Ubuntu 16.04]]></title>
+    <link href="http://aschei.github.io/blog/2017/04/20/services-in-ubuntu-16-dot-04/"/>
+    <updated>2017-04-20T23:37:09+02:00</updated>
+    <id>http://aschei.github.io/blog/2017/04/20/services-in-ubuntu-16-dot-04</id>
+    <content type="html"><![CDATA[<p>Ubuntu since 14.04 switches to <a href="https://freedesktop.org/wiki/Software/systemd/">systemd</a> to manage services. Time to
+learn something new.</p>
+
+<p>Key to systemd is the command <code>systemctl</code></p>
+
+<p>Disable a service (so that it does not start when system reboots):<br>
+<code>sudo systemctl disable mongodb</code></p>
+
+<p>Enable a service (for automatic startup when system reboots):<br>
+<code>sudo systemctl enable mongodb</code></p>
+
+<p>Start / Stop a service:<br>
+<code>sudo systemctl start mongodb</code><br>
+<code>sudo systemctl stop mongodb</code><br></p>
+
+<p>Further helpful tweaks for systemd on <a href="https://wiki.ubuntuusers.de/systemd/Service_Units/">this page</a>.
+See also <a href="http://aschei.github.io/blog/2013/12/16/howto-disable-daemons-permanently/">this</a> former post about upstart and systemv runlevels.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Radieschensalat]]></title>
